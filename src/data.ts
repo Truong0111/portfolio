@@ -61,7 +61,7 @@ export const games: Game[] = [
     ],
     media: [
       { source: "/images/games/Baby_Escape/loading.png", type: MediaType.Image },
-      { source: "/images/games/Baby_Escape/Screenshot_1.png", type: MediaType.Image },
+      { source: "/images/games/Baby_Escape/screenshot_1.png", type: MediaType.Image },
       { source: "https://www.youtube.com/watch?v=-Zk1brYKM1Y", type: MediaType.YouTube },
     ],
     role: "Gameplay Programmer, Level Design"
