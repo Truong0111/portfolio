@@ -1,0 +1,110 @@
+/* ===== Fonts ===== */
+@font-face {
+  font-family: 'PhoenixGaming';
+  src: url('/assets/fonts/PhoenixGaming.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'PixelGame';
+  src: url('/assets/fonts/PixelGame.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'ZenDots';
+  src: url('/assets/fonts/ZenDots.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Oxanium';
+  src: url('/assets/fonts/Oxanium.ttf') format('truetype');
+}
+
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Body ===== */
+body {
+  font-size: 20px;
+  font-family: 'Oxanium', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color: #ffffff;
+
+  /* Background fix cho Vite */
+  background-image: url('/assets/images/Background.jpg');
+  background-repeat: repeat;
+  background-size: 400px;
+
+  /* smooth scroll */
+  scroll-behavior: smooth;
+}
+
+/* ===== Typography ===== */
+h1, h2, h3 {
+  font-family: 'PhoenixGaming', sans-serif;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* ===== Links ===== */
+a {
+  color: #00ff88;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: #00cc6a;
+}
+
+/* ===== Inputs ===== */
+input,
+select,
+textarea {
+  font-family: 'Oxanium', sans-serif;
+  padding: 0.6em;
+  margin: 0.5em 0;
+  border: 1px solid #555;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border-radius: 6px;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #00ff88;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(163, 155, 155, 0.6);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(163, 155, 155, 0.9);
+}
+
+/* ===== Utility ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
