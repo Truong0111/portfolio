@@ -32,16 +32,6 @@ const Description = styled.p`
   }
 `;
 
-const Logo = styled.img`
-  height: 90px;
-  margin-right: 2vw;
-
-  @media (max-width: 768px) {
-    height: 50px;
-  }
-`;
-
-
 const SelfSummary: React.FC = () => {
   return (
     <SelfSummaryContainer>
