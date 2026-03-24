@@ -48,7 +48,7 @@ const LogoImage = styled.img<{ size: number }>`
 const LogoButton: React.FC<LogoProps> = ({ source, size, margin = 0, linkTo }) => {
   return (
     <LogoContainer href={linkTo} target="_blank" rel="noopener noreferrer" size={size} margin={margin}>
-      <LogoImage src={`/public${source}`} alt="logo" size={size} />
+      <LogoImage src={`${import.meta.env.VITE_BASE_URL}${source}`} alt="logo" size={size} />
     </LogoContainer>
   );
 };
