@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { type MediaItem, MediaType } from "../types";
 import { Row } from "../Styles/StyledComponents";
+
 const MediaWrapper = styled(Row)`
   justify-content: center;
   width: 100%;
@@ -59,6 +60,11 @@ const BigMedia: React.FC<MediaItem> = ({ source, type }) => {
     }
   };
 
+  const getImageUrl = (src: string) => {
+    // Thêm BASE_URL nếu là ảnh
+    return `${import.meta.env.BASE_URL}${src}`;
+  };
+
   const getYouTubeEmbedUrl = (url: string) => {
     try {
       // watch?v=
@@ -95,13 +101,13 @@ const BigMedia: React.FC<MediaItem> = ({ source, type }) => {
             allowFullScreen
           />
         ) : (
-          <MediaImage src={`${source}`} alt="Game Media" />
+          <MediaImage src={getImageUrl(source)} alt="Game Media" />
         )}
       </MediaWrapper>
 
       {isPopupOpen && (
         <PopupOverlay onClick={() => setIsPopupOpen(false)}>
-          <PopupImage src={`${source}`} alt="Enlarged Media" />
+          <PopupImage src={getImageUrl(source)} alt="Enlarged Media" />
         </PopupOverlay>
       )}
     </>

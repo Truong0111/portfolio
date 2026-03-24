@@ -7,7 +7,7 @@ const MetaTags: React.FC<{ info: AboutMeData }> = ({ info }) => {
         <Helmet>
             <title>{info.name}'s portfolio</title>
             <meta name="description" content={info.introduction} />
-            <meta property="og:image" content={`/public/favicon.ico`} />
+            <meta property="og:image" content={`${import.meta.env.BASE_URL}/favicon.ico`} />
         </Helmet>
     );
 };

@@ -4,8 +4,8 @@ export const PersonalInfo: AboutMeData = {
   role: "Unity Developer",
   introduction: "I'm Unity Developer.",
   description: "I’m a Unity Developer with experience working in C# and building game features such as gameplay mechanics and UI systems.. I’ve worked on several projects that helped me strengthen my problem-solving skills and understanding of game development workflows. I’m looking to continue learning and contribute to projects where I can grow as a developer.",
-  image: `/public/images/Profile.jpg`,
-  cvUri: `/public/files/CV_TQT.pdf`,
+  image: `${import.meta.env.BASE_URL}/images/Profile.jpg`,
+  cvUri: `${import.meta.env.BASE_URL}/files/CV_TQT.pdf`,
   links: {
     github: "https://github.com/Truong0111",
   }

@@ -162,13 +162,13 @@ const GameMedia: React.FC<GameMediaProps> = ({ media }) => {
         <Thumbnails ref={thumbnailsContainerRef}>
           {media.map((item, index) => {
             const isYouTubeVideo = item.type === MediaType.YouTube;
-            const thumbnailSrc = isYouTubeVideo ? getYouTubeThumbnail(item.source) : `/public${item.source}`;
+            const thumbnailSrc = isYouTubeVideo ? getYouTubeThumbnail(item.source) : `${import.meta.env.BASE_URL}${item.source}`;
 
             return (
               <ThumbnailWrapper key={index}>
                 <Thumbnail
                   id={`thumbnail${index}`}
-                  // ref={(el) => (thumbnailRefs.current[index] = el)}
+                  ref={(el) => (thumbnailRefs.current[index] = el)}
                   src={thumbnailSrc}
                   $isSelected={index === currentIndex}
                   onClick={() => handleThumbnailClick(index)}
