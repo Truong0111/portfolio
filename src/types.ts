@@ -5,7 +5,7 @@ export const LinkImageSource = {
 export type LinkImageSource =
   typeof LinkImageSource[keyof typeof LinkImageSource];
 
-export const LinkGameStore={
+export const LinkGameStore = {
   GooglePlay: "/images/logos/google-play.png",
   AppStore: "/images/logos/app-store.png"
 }
@@ -76,7 +76,10 @@ export interface Experience {
 }
 
 export interface Skill {
-  programming: string[];
-  tools: string[];
+  languages?: string[];
+  programming?: string[];
+  designPatterns?: string[];
+  unity?: string[];
+  tools?: string[];
   other?: string[];
 }

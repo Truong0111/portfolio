@@ -133,15 +133,23 @@ const GameMedia: React.FC<GameMediaProps> = ({ media }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
 
+  if (!media || media.length === 0) {
+    return null;
+  }
+
   const updateMediaIndex = (newIndex: number) => {
     if (newIndex !== currentIndex) {
       setIsFading(true);
+
       setTimeout(() => {
         setCurrentIndex(newIndex);
         setIsFading(false);
-        const thumbnail = thumbnailRefs.current[newIndex];
-        thumbnail?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
+        const thumbnail = thumbnailRefs.current[newIndex];
+        thumbnail?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'nearest'
+        });
       }, 150);
     }
   };
@@ -150,35 +158,42 @@ const GameMedia: React.FC<GameMediaProps> = ({ media }) => {
   const nextMedia = () => updateMediaIndex((currentIndex + 1) % media.length);
   const prevMedia = () => updateMediaIndex((currentIndex - 1 + media.length) % media.length);
 
-
   return (
     <GameMediaContainer>
       <LargeMediaWrapper $isFading={isFading}>
-        <BigMedia source={media[currentIndex].source} type={media[currentIndex].type} />
+        <BigMedia
+          source={media[currentIndex].source}
+          type={media[currentIndex].type}
+        />
       </LargeMediaWrapper>
 
       <ThumbnailContainer>
         <Arrow onClick={prevMedia}>◀&nbsp;</Arrow>
+
         <Thumbnails ref={thumbnailsContainerRef}>
           {media.map((item, index) => {
             const isYouTubeVideo = item.type === MediaType.YouTube;
-            const thumbnailSrc = isYouTubeVideo ? getYouTubeThumbnail(item.source) : `${import.meta.env.BASE_URL}${item.source}`;
+
+            const thumbnailSrc = isYouTubeVideo
+              ? getYouTubeThumbnail(item.source)
+              : `${import.meta.env.BASE_URL}${item.source}`;
 
             return (
               <ThumbnailWrapper key={index}>
                 <Thumbnail
-                  id={`thumbnail${index}`}
-                  // ref={(el) => (thumbnailRefs.current[index] = el)}
                   src={thumbnailSrc}
                   $isSelected={index === currentIndex}
                   onClick={() => handleThumbnailClick(index)}
                 />
-                {isYouTubeVideo && <PlayIcon onClick={() => handleThumbnailClick(index)} />}
+
+                {isYouTubeVideo && (
+                  <PlayIcon onClick={() => handleThumbnailClick(index)} />
+                )}
               </ThumbnailWrapper>
             );
           })}
-
         </Thumbnails>
+
         <Arrow onClick={nextMedia}>&nbsp;▶</Arrow>
       </ThumbnailContainer>
     </GameMediaContainer>

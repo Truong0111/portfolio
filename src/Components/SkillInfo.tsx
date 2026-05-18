@@ -36,16 +36,37 @@ const SkillList = styled.ul`
 const SkillInfo: React.FC<SkillInfoProps> = ({ skill }) => {
   return (
     <SkillInfoContainer>
+      <SkillCategory>Languages:</SkillCategory>
+      <SkillList>
+        {skill.languages?.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </SkillList>
+
       <SkillCategory>Programming:</SkillCategory>
       <SkillList>
-        {skill.programming.map((item, index) => (
+        {skill.programming?.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </SkillList>
+
+      <SkillCategory>Design Patterns:</SkillCategory>
+      <SkillList>
+        {skill.designPatterns?.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </SkillList>
+
+      <SkillCategory>Unity:</SkillCategory>
+      <SkillList>
+        {skill.unity?.map((item, index) => (
           <li key={index}>{item}</li>
         ))}
       </SkillList>
 
       <SkillCategory>Tools:</SkillCategory>
       <SkillList>
-        {skill.tools.map((item, index) => (
+        {skill.tools?.map((item, index) => (
           <li key={index}>{item}</li>
         ))}
       </SkillList>

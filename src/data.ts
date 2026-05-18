@@ -5,7 +5,7 @@ export const PersonalInfo: AboutMeData = {
   introduction: "I'm Unity Developer.",
   description: "I’m a Unity Developer with experience working in C# and building game features such as gameplay mechanics and UI systems.. I’ve worked on several projects that helped me strengthen my problem-solving skills and understanding of game development workflows. I’m looking to continue learning and contribute to projects where I can grow as a developer.",
   image: `${import.meta.env.BASE_URL}/images/Profile.jpg`,
-  cvUri: `${import.meta.env.BASE_URL}/files/CV_TQT.pdf`,
+  cvUri: `${import.meta.env.BASE_URL}/files/TruongTQ_CV.pdf`,
   links: {
     github: "https://github.com/Truong0111",
   }
@@ -13,7 +13,13 @@ export const PersonalInfo: AboutMeData = {
 
 export const skills: Skill[] = [
   {
-    programming: ["C#", "Animation(2D/3D)", "UI", "DOTween", "Unity Editor"],
+    languages: ["C#", "C/C++"],
+    programming: ["OOP", "SOLID", "Data Structures and Algorithms"],
+    designPatterns: ["Singleton", "Object Pooling", "Factory", "Observer", "State Machine"],
+    unity: ["Physics 2D/3D", "UI System", "Audio System", "Animation", "Spine",
+      "Shader", "Particle System", "Scriptable Object", "Addressable", "Save/Load File",
+      "Custom Editor Tool", "Optimize with Profiler, Frame Debugger, Memory Profiler"
+    ],
     tools: ["Git", "Figma"],
   }
 ]
@@ -28,15 +34,62 @@ export const experiences: Experience[] = [
     company: "Percas Studio",
     position: "Gameplay Programmer, UI Programmer",
     time: "02/2025 - 10/2025"
-  }
+  },
+  {
+    company: "WingsMob Studio",
+    position: "Gameplay Programmer, UI Programmer",
+    time: "04/2026 - 05/2026"
+  },
 ]
 
 export const games: Game[] = [
   {
+    name: "Lucky Scoop: DIY Packing",
+    description: "Lucky Scoop: DIY Packing is a relaxing casual simulation game inspired by viral scoop and packing trends. Players scoop adorable items, fulfill customer orders, pack DIY boxes, and unlock cute collectibles through satisfying ASMR-style interactions and cozy gameplay.",
+    genres: ["Simulation", "Casual", "ASMR"],
+    platforms: [Platform.Android, Platform.iOS],
+    engine: GameEngine.Unity,
+    links: [
+      { source: LinkGameStore.GooglePlay, url: "https://play.google.com/store/apps/details?id=com.wgm.luckyscoop.relaxing" },
+      { source: LinkGameStore.AppStore, url: "https://apps.apple.com/vn/app/lucky-scoop-diy-packing/id6761824373?l=vi" },
+    ],
+    media: [
+    ],
+    role: "Feature Programmer, UI Progammer"
+  },
+  {
+    name: "Grill Sizzle",
+    description: "Grill Sizzle is a casual match-3 puzzle game where players drag and match items to clear levels, complete objectives, and progress through simple, level-based challenges.",
+    genres: ["Puzzle"],
+    platforms: [Platform.Android, Platform.iOS],
+    engine: GameEngine.Unity,
+    links: [
+      // { source: LinkImageSource.Github, url: "https://github.com/YOUR_REPO" },
+    ],
+    media: [
+      { source: "https://youtube.com/shorts/SgDiMc9O7Oo", type: MediaType.YouTube },
+    ],
+    role: "Solo Programmer"
+  },
+  {
+    name: "Coffee Connect",
+    description: "Coffee Connect is a casual puzzle game where players link matching items, clear levels, and complete objectives through simple, level-based gameplay.",
+    genres: ["Puzzle"],
+    platforms: [Platform.Android, Platform.iOS],
+    engine: GameEngine.Unity,
+    links: [
+      // { source: LinkImageSource.Github, url: "https://github.com/YOUR_REPO" },
+    ],
+    media: [
+      { source: "https://youtube.com/shorts/JIwKiWxzD4k", type: MediaType.YouTube },
+    ],
+    role: "Solo Programmer"
+  },
+  {
     name: "Tidy Time: Perfect ASMR Game",
     description: "Tidy Time: Perfect ASMR Game is a casual simulation and puzzle game where players clean, organize, and arrange objects in relaxing, level-based scenarios with satisfying ASMR feedback.",
     genres: ["Puzzle", "Simulation"],
-    platforms: [Platform.Android],
+    platforms: [Platform.Android, Platform.iOS],
     engine: GameEngine.Unity,
     links: [
       { source: LinkGameStore.GooglePlay, url: "https://play.google.com/store/apps/details?id=com.pc.tidy.craze.diy.asmr.ocd.relax.cozy&hl=vi" },
@@ -52,19 +105,30 @@ export const games: Game[] = [
     role: "Core game programmer, Gameplay programmer, UI programmer"
   },
   {
-    name: "Baby Escape",
-    description: "Baby Escape is a hyper-casual level-based runner game where players guide a baby character through obstacles, collect items, and make quick decisions to safely reach the finish line.",
+    name: "Space Escape",
+    description: "Space Escape is a casual puzzle game where players drag and place arrows to guide the character, avoid obstacles, collect keys, and reach the exit in level-based challenges.",
+    genres: ["Puzzle"],
+    platforms: [Platform.Android],
+    engine: GameEngine.Unity,
+    links: [
+      { source: LinkImageSource.Github, url: "https://github.com/Truong0111/SpaceEscape" },
+    ],
+    media: [
+      { source: "https://youtu.be/0TYZL4zUf9w", type: MediaType.YouTube },
+    ],
+    role: "Solo Programmer"
+  },
+  {
+    name: "Animal Shooter",
+    description: "Animal Shooter is a hyper-casual shooting game where players control animal characters, defeat enemies, and progress through levels using simple controls and fast-paced gameplay.",
     genres: ["Hyper-casual"],
     platforms: [Platform.Android],
     engine: GameEngine.Unity,
     links: [
     ],
     media: [
-      { source: "/images/games/Baby_Escape/loading.png", type: MediaType.Image },
-      { source: "/images/games/Baby_Escape/Screenshot_1.png", type: MediaType.Image },
-      { source: "https://www.youtube.com/watch?v=-Zk1brYKM1Y", type: MediaType.YouTube },
     ],
-    role: "Gameplay Programmer, Level Design"
+    role: "Solo Programmer"
   },
   {
     name: "Prank the Thief: Hunt and Find",
@@ -81,63 +145,20 @@ export const games: Game[] = [
     ],
     role: "Gameplay Programmer, UI Programmer"
   },
-  // {
-  //   name: "Animal Shooter",
-  //   description: "Animal Shooter is a hyper-casual shooting game where players control animal characters, defeat enemies, and progress through levels using simple controls and fast-paced gameplay.",
-  //   genres: ["Hyper-casual"],
-  //   platforms: [Platform.Android],
-  //   engine: GameEngine.Unity,
-  //   links: [
-  //   ],
-  //   media: [
-  //     { source: "/images/games/Animal_Shooter/Screenshot_1.png", type: MediaType.Image },
-  //     { source: "/images/games/Animal_Shooter/Screenshot_2.png", type: MediaType.Image },
-  //     { source: "/images/games/Animal_Shooter/Screenshot_3.png", type: MediaType.Image },
-  //     { source: "/images/games/Animal_Shooter/Screenshot_4.png", type: MediaType.Image },
-  //   ],
-  //   role: "Solo Programmer"
-  // },
   {
-    name: "Coffee Connect",
-    description: "Coffee Connect is a casual puzzle game where players link matching items, clear levels, and complete objectives through simple, level-based gameplay.",
-    genres: ["Puzzle"],
+    name: "Baby Escape",
+    description: "Baby Escape is a hyper-casual level-based runner game where players guide a baby character through obstacles, collect items, and make quick decisions to safely reach the finish line.",
+    genres: ["Hyper-casual"],
     platforms: [Platform.Android],
     engine: GameEngine.Unity,
     links: [
-      // { source: LinkImageSource.Github, url: "https://github.com/YOUR_REPO" },
     ],
     media: [
-      { source: "https://youtube.com/shorts/JIwKiWxzD4k", type: MediaType.YouTube },
+      { source: "/images/games/Baby_Escape/loading.png", type: MediaType.Image },
+      { source: "/images/games/Baby_Escape/screenshot_1.png", type: MediaType.Image },
+      { source: "https://www.youtube.com/watch?v=-Zk1brYKM1Y", type: MediaType.YouTube },
     ],
-    role: "Solo Programmer"
-  },
-  {
-    name: "Grill Sizzle",
-    description: "Grill Sizzle is a casual match-3 puzzle game where players drag and match items to clear levels, complete objectives, and progress through simple, level-based challenges.",
-    genres: ["Puzzle"],
-    platforms: [Platform.Android],
-    engine: GameEngine.Unity,
-    links: [
-      // { source: LinkImageSource.Github, url: "https://github.com/YOUR_REPO" },
-    ],
-    media: [
-      { source: "https://youtube.com/shorts/SgDiMc9O7Oo", type: MediaType.YouTube },
-    ],
-    role: "Solo Programmer"
-  },
-  {
-    name: "Space Escape",
-    description: "Space Escape is a casual puzzle game where players drag and place arrows to guide the character, avoid obstacles, collect keys, and reach the exit in level-based challenges.",
-    genres: ["Puzzle"],
-    platforms: [Platform.Android],
-    engine: GameEngine.Unity,
-    links: [
-      { source: LinkImageSource.Github, url: "https://github.com/Truong0111/SpaceEscape" },
-    ],
-    media: [
-      { source: "https://youtu.be/0TYZL4zUf9w", type: MediaType.YouTube },
-    ],
-    role: "Solo Programmer"
+    role: "Gameplay Programmer, Level Design"
   },
   {
     name: "Gas Head Run",

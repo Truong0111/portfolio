@@ -152,7 +152,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
     width: 30px;
     height: 30px;
   }
-`,Ii=e=>{let t=e.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);return t?`https://img.youtube.com/vi/${t[1]}/mqdefault.jpg`:`/fallback-thumbnail.jpg`},Li=e=>{let t=(0,hi.c)(11),{media:n}=e,r=(0,_.useRef)(null),i=(0,_.useRef)([]),[a,o]=(0,_.useState)(0),[s,c]=(0,_.useState)(!1),l=e=>{e!==a&&(c(!0),setTimeout(()=>{o(e),c(!1),i.current[e]?.scrollIntoView({behavior:`smooth`,block:`nearest`})},150))},u=e=>l(e),d=()=>l((a+1)%n.length),f=()=>l((a-1+n.length)%n.length),p=n[a],m=n[a],h;t[0]!==p.source||t[1]!==m.type?(h=(0,R.jsx)(Di,{source:p.source,type:m.type}),t[0]=p.source,t[1]=m.type,t[2]=h):h=t[2];let g;t[3]!==s||t[4]!==h?(g=(0,R.jsx)(ji,{$isFading:s,children:h}),t[3]=s,t[4]=h,t[5]=g):g=t[5];let v=Ni,y=n.map((e,t)=>{let n=e.type===I.YouTube,r=n?Ii(e.source):`/portfolio/${e.source}`;return(0,R.jsxs)(z,{children:[(0,R.jsx)(B,{id:`thumbnail${t}`,src:r,$isSelected:t===a,onClick:()=>u(t)}),n&&(0,R.jsx)(Pi,{onClick:()=>u(t)})]},t)}),b;t[6]!==v||t[7]!==y?(b=(0,R.jsx)(v,{ref:r,children:y}),t[6]=v,t[7]=y,t[8]=b):b=t[8];let x;return t[9]===d?x=t[10]:(x=(0,R.jsx)(Fi,{onClick:d,children:`\xA0▶`}),t[9]=d,t[10]=x),(0,R.jsxs)(Ai,{children:[g,(0,R.jsxs)(Mi,{children:[(0,R.jsx)(Fi,{onClick:f,children:`◀\xA0`}),b,x]})]})},Ri=F.a`
+`,Ii=e=>{let t=e.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);return t?`https://img.youtube.com/vi/${t[1]}/mqdefault.jpg`:`/fallback-thumbnail.jpg`},Li=e=>{let t=(0,hi.c)(11),{media:n}=e,r=(0,_.useRef)(null),i=(0,_.useRef)([]),[a,o]=(0,_.useState)(0),[s,c]=(0,_.useState)(!1);if(!n||n.length===0)return null;let l=e=>{e!==a&&(c(!0),setTimeout(()=>{o(e),c(!1),i.current[e]?.scrollIntoView({behavior:`smooth`,block:`nearest`})},150))},u=e=>l(e),d=()=>l((a+1)%n.length),f=()=>l((a-1+n.length)%n.length),p=n[a],m=n[a],h;t[0]!==p.source||t[1]!==m.type?(h=(0,R.jsx)(Di,{source:p.source,type:m.type}),t[0]=p.source,t[1]=m.type,t[2]=h):h=t[2];let g;t[3]!==s||t[4]!==h?(g=(0,R.jsx)(ji,{$isFading:s,children:h}),t[3]=s,t[4]=h,t[5]=g):g=t[5];let v=Ni,y=n.map((e,t)=>{let n=e.type===I.YouTube;return(0,R.jsxs)(z,{children:[(0,R.jsx)(B,{src:n?Ii(e.source):`/portfolio/${e.source}`,$isSelected:t===a,onClick:()=>u(t)}),n&&(0,R.jsx)(Pi,{onClick:()=>u(t)})]},t)}),b;t[6]!==v||t[7]!==y?(b=(0,R.jsx)(v,{ref:r,children:y}),t[6]=v,t[7]=y,t[8]=b):b=t[8];let x;return t[9]===d?x=t[10]:(x=(0,R.jsx)(Fi,{onClick:d,children:`\xA0▶`}),t[9]=d,t[10]=x),(0,R.jsxs)(Ai,{children:[g,(0,R.jsxs)(Mi,{children:[(0,R.jsx)(Fi,{onClick:f,children:`◀\xA0`}),b,x]})]})},Ri=F.a`
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -236,7 +236,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
     max-width: 100%;
   }
     
-`,Qi=e=>{let t=(0,hi.c)(7),{game:n}=e,r;t[0]===n?r=t[1]:(r=(0,R.jsx)(Yi,{game:n}),t[0]=n,t[1]=r);let i;t[2]===n.media?i=t[3]:(i=(0,R.jsx)(Li,{media:n.media}),t[2]=n.media,t[3]=i);let a;return t[4]!==r||t[5]!==i?(a=(0,R.jsxs)(Zi,{children:[r,i]}),t[4]=r,t[5]=i,t[6]=a):a=t[6],a},$i={name:`Truong Quang Truong`,role:`Unity Developer`,introduction:`I'm Unity Developer.`,description:`I’m a Unity Developer with experience working in C# and building game features such as gameplay mechanics and UI systems.. I’ve worked on several projects that helped me strengthen my problem-solving skills and understanding of game development workflows. I’m looking to continue learning and contribute to projects where I can grow as a developer.`,image:`/portfolio//images/Profile.jpg`,cvUri:`/portfolio//files/CV_TQT.pdf`,links:{github:`https://github.com/Truong0111`}},ea=[{programming:[`C#`,`Animation(2D/3D)`,`UI`,`DOTween`,`Unity Editor`],tools:[`Git`,`Figma`]}],ta=[{company:`Rocket Studio`,position:`Gameplay Programmer, UI Programmer`,time:`06/2023 - 05/2024`},{company:`Percas Studio`,position:`Gameplay Programmer, UI Programmer`,time:`02/2025 - 10/2025`}],na=[{name:`Tidy Time: Perfect ASMR Game`,description:`Tidy Time: Perfect ASMR Game is a casual simulation and puzzle game where players clean, organize, and arrange objects in relaxing, level-based scenarios with satisfying ASMR feedback.`,genres:[`Puzzle`,`Simulation`],platforms:[vi.Android],engine:yi.Unity,links:[{source:_i.GooglePlay,url:`https://play.google.com/store/apps/details?id=com.pc.tidy.craze.diy.asmr.ocd.relax.cozy&hl=vi`},{source:_i.AppStore,url:`https://apps.apple.com/vn/app/tidy-time-perfect-asmr/id6746779280?l=vi`}],media:[{source:`/images/games/Tidy_Time/menu.png`,type:I.Image},{source:`/images/games/Tidy_Time/unlock.png`,type:I.Image},{source:`/images/games/Tidy_Time/win.png`,type:I.Image},{source:`/images/games/Tidy_Time/screenshot_1.png`,type:I.Image},{source:`/images/games/Tidy_Time/screenshot_2.png`,type:I.Image}],role:`Core game programmer, Gameplay programmer, UI programmer`},{name:`Baby Escape`,description:`Baby Escape is a hyper-casual level-based runner game where players guide a baby character through obstacles, collect items, and make quick decisions to safely reach the finish line.`,genres:[`Hyper-casual`],platforms:[vi.Android],engine:yi.Unity,links:[],media:[{source:`/images/games/Baby_Escape/loading.png`,type:I.Image},{source:`/images/games/Baby_Escape/Screenshot_1.png`,type:I.Image},{source:`https://www.youtube.com/watch?v=-Zk1brYKM1Y`,type:I.YouTube}],role:`Gameplay Programmer, Level Design`},{name:`Prank the Thief: Hunt and Find`,description:`Prank the Thief: Hunt and Find is a hyper-casual game where player set traps, hide, and interact with the environment to outsmart thieves in short, level-based challenges.`,genres:[`Hyper-casual`],platforms:[vi.Android],engine:yi.Unity,links:[],media:[{source:`/images/games/Prank_The_Thief/screenshot_1.png`,type:I.Image},{source:`/images/games/Prank_The_Thief/screenshot_2.png`,type:I.Image},{source:`https://www.youtube.com/watch?v=5YuvkxCw-OA`,type:I.YouTube}],role:`Gameplay Programmer, UI Programmer`},{name:`Coffee Connect`,description:`Coffee Connect is a casual puzzle game where players link matching items, clear levels, and complete objectives through simple, level-based gameplay.`,genres:[`Puzzle`],platforms:[vi.Android],engine:yi.Unity,links:[],media:[{source:`https://youtube.com/shorts/JIwKiWxzD4k`,type:I.YouTube}],role:`Solo Programmer`},{name:`Grill Sizzle`,description:`Grill Sizzle is a casual match-3 puzzle game where players drag and match items to clear levels, complete objectives, and progress through simple, level-based challenges.`,genres:[`Puzzle`],platforms:[vi.Android],engine:yi.Unity,links:[],media:[{source:`https://youtube.com/shorts/SgDiMc9O7Oo`,type:I.YouTube}],role:`Solo Programmer`},{name:`Space Escape`,description:`Space Escape is a casual puzzle game where players drag and place arrows to guide the character, avoid obstacles, collect keys, and reach the exit in level-based challenges.`,genres:[`Puzzle`],platforms:[vi.Android],engine:yi.Unity,links:[{source:gi.Github,url:`https://github.com/Truong0111/SpaceEscape`}],media:[{source:`https://youtu.be/0TYZL4zUf9w`,type:I.YouTube}],role:`Solo Programmer`},{name:`Gas Head Run`,description:`Gas Head Run is a hyper-casual level-based runner game where players collect fuel, and manage energy to reach the finish line through fast-paced and simple gameplay.`,genres:[`Hyper-casual`],platforms:[vi.Android],engine:yi.Unity,links:[],media:[{source:`/images/games/Gas_Head_Run/menu.png`,type:I.Image},{source:`/images/games/Gas_Head_Run/spin.png`,type:I.Image},{source:`https://youtube.com/shorts/6s5LIzOlaR8?feature=share`,type:I.YouTube}],role:`Solo Programmer`}],ra=F(L)`
+`,Qi=e=>{let t=(0,hi.c)(7),{game:n}=e,r;t[0]===n?r=t[1]:(r=(0,R.jsx)(Yi,{game:n}),t[0]=n,t[1]=r);let i;t[2]===n.media?i=t[3]:(i=(0,R.jsx)(Li,{media:n.media}),t[2]=n.media,t[3]=i);let a;return t[4]!==r||t[5]!==i?(a=(0,R.jsxs)(Zi,{children:[r,i]}),t[4]=r,t[5]=i,t[6]=a):a=t[6],a},$i={name:`Truong Quang Truong`,role:`Unity Developer`,introduction:`I'm Unity Developer.`,description:`I’m a Unity Developer with experience working in C# and building game features such as gameplay mechanics and UI systems.. I’ve worked on several projects that helped me strengthen my problem-solving skills and understanding of game development workflows. I’m looking to continue learning and contribute to projects where I can grow as a developer.`,image:`/portfolio//images/Profile.jpg`,cvUri:`/portfolio//files/TruongTQ_CV.pdf`,links:{github:`https://github.com/Truong0111`}},ea=[{languages:[`C#`,`C/C++`],programming:[`OOP`,`SOLID`,`Data Structures and Algorithms`],designPatterns:[`Singleton`,`Object Pooling`,`Factory`,`Observer`,`State Machine`],unity:[`Physics 2D/3D`,`UI System`,`Audio System`,`Animation`,`Spine`,`Shader`,`Particle System`,`Scriptable Object`,`Addressable`,`Save/Load File`,`Custom Editor Tool`,`Optimize with Profiler, Frame Debugger, Memory Profiler`],tools:[`Git`,`Figma`]}],ta=[{company:`Rocket Studio`,position:`Gameplay Programmer, UI Programmer`,time:`06/2023 - 05/2024`},{company:`Percas Studio`,position:`Gameplay Programmer, UI Programmer`,time:`02/2025 - 10/2025`},{company:`WingsMob Studio`,position:`Gameplay Programmer, UI Programmer`,time:`04/2026 - 05/2026`}],na=[{name:`Lucky Scoop: DIY Packing`,description:`Lucky Scoop: DIY Packing is a relaxing casual simulation game inspired by viral scoop and packing trends. Players scoop adorable items, fulfill customer orders, pack DIY boxes, and unlock cute collectibles through satisfying ASMR-style interactions and cozy gameplay.`,genres:[`Simulation`,`Casual`,`ASMR`],platforms:[vi.Android,vi.iOS],engine:yi.Unity,links:[{source:_i.GooglePlay,url:`https://play.google.com/store/apps/details?id=com.wgm.luckyscoop.relaxing`},{source:_i.AppStore,url:`https://apps.apple.com/vn/app/lucky-scoop-diy-packing/id6761824373?l=vi`}],media:[],role:`Feature Programmer, UI Progammer`},{name:`Grill Sizzle`,description:`Grill Sizzle is a casual match-3 puzzle game where players drag and match items to clear levels, complete objectives, and progress through simple, level-based challenges.`,genres:[`Puzzle`],platforms:[vi.Android,vi.iOS],engine:yi.Unity,links:[],media:[{source:`https://youtube.com/shorts/SgDiMc9O7Oo`,type:I.YouTube}],role:`Solo Programmer`},{name:`Coffee Connect`,description:`Coffee Connect is a casual puzzle game where players link matching items, clear levels, and complete objectives through simple, level-based gameplay.`,genres:[`Puzzle`],platforms:[vi.Android,vi.iOS],engine:yi.Unity,links:[],media:[{source:`https://youtube.com/shorts/JIwKiWxzD4k`,type:I.YouTube}],role:`Solo Programmer`},{name:`Tidy Time: Perfect ASMR Game`,description:`Tidy Time: Perfect ASMR Game is a casual simulation and puzzle game where players clean, organize, and arrange objects in relaxing, level-based scenarios with satisfying ASMR feedback.`,genres:[`Puzzle`,`Simulation`],platforms:[vi.Android,vi.iOS],engine:yi.Unity,links:[{source:_i.GooglePlay,url:`https://play.google.com/store/apps/details?id=com.pc.tidy.craze.diy.asmr.ocd.relax.cozy&hl=vi`},{source:_i.AppStore,url:`https://apps.apple.com/vn/app/tidy-time-perfect-asmr/id6746779280?l=vi`}],media:[{source:`/images/games/Tidy_Time/menu.png`,type:I.Image},{source:`/images/games/Tidy_Time/unlock.png`,type:I.Image},{source:`/images/games/Tidy_Time/win.png`,type:I.Image},{source:`/images/games/Tidy_Time/screenshot_1.png`,type:I.Image},{source:`/images/games/Tidy_Time/screenshot_2.png`,type:I.Image}],role:`Core game programmer, Gameplay programmer, UI programmer`},{name:`Space Escape`,description:`Space Escape is a casual puzzle game where players drag and place arrows to guide the character, avoid obstacles, collect keys, and reach the exit in level-based challenges.`,genres:[`Puzzle`],platforms:[vi.Android],engine:yi.Unity,links:[{source:gi.Github,url:`https://github.com/Truong0111/SpaceEscape`}],media:[{source:`https://youtu.be/0TYZL4zUf9w`,type:I.YouTube}],role:`Solo Programmer`},{name:`Animal Shooter`,description:`Animal Shooter is a hyper-casual shooting game where players control animal characters, defeat enemies, and progress through levels using simple controls and fast-paced gameplay.`,genres:[`Hyper-casual`],platforms:[vi.Android],engine:yi.Unity,links:[],media:[],role:`Solo Programmer`},{name:`Prank the Thief: Hunt and Find`,description:`Prank the Thief: Hunt and Find is a hyper-casual game where player set traps, hide, and interact with the environment to outsmart thieves in short, level-based challenges.`,genres:[`Hyper-casual`],platforms:[vi.Android],engine:yi.Unity,links:[],media:[{source:`/images/games/Prank_The_Thief/screenshot_1.png`,type:I.Image},{source:`/images/games/Prank_The_Thief/screenshot_2.png`,type:I.Image},{source:`https://www.youtube.com/watch?v=5YuvkxCw-OA`,type:I.YouTube}],role:`Gameplay Programmer, UI Programmer`},{name:`Baby Escape`,description:`Baby Escape is a hyper-casual level-based runner game where players guide a baby character through obstacles, collect items, and make quick decisions to safely reach the finish line.`,genres:[`Hyper-casual`],platforms:[vi.Android],engine:yi.Unity,links:[],media:[{source:`/images/games/Baby_Escape/loading.png`,type:I.Image},{source:`/images/games/Baby_Escape/screenshot_1.png`,type:I.Image},{source:`https://www.youtube.com/watch?v=-Zk1brYKM1Y`,type:I.YouTube}],role:`Gameplay Programmer, Level Design`},{name:`Gas Head Run`,description:`Gas Head Run is a hyper-casual level-based runner game where players collect fuel, and manage energy to reach the finish line through fast-paced and simple gameplay.`,genres:[`Hyper-casual`],platforms:[vi.Android],engine:yi.Unity,links:[],media:[{source:`/images/games/Gas_Head_Run/menu.png`,type:I.Image},{source:`/images/games/Gas_Head_Run/spin.png`,type:I.Image},{source:`https://youtube.com/shorts/6s5LIzOlaR8?feature=share`,type:I.YouTube}],role:`Solo Programmer`}],ra=F(L)`
   gap: 100px;
   padding: 20px;
 
@@ -351,29 +351,29 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   @media (max-width: 768px) {
     font-size: 1rem;
   }
-`,ka=e=>{let t=(0,hi.c)(16),{skill:n}=e,r;t[0]===Symbol.for(`react.memo_cache_sentinel`)?(r=(0,R.jsx)(Da,{children:`Programming:`}),t[0]=r):r=t[0];let i;t[1]===n.programming?i=t[2]:(i=n.programming.map(Aa),t[1]=n.programming,t[2]=i);let a;t[3]===i?a=t[4]:(a=(0,R.jsx)(Oa,{children:i}),t[3]=i,t[4]=a);let o;t[5]===Symbol.for(`react.memo_cache_sentinel`)?(o=(0,R.jsx)(Da,{children:`Tools:`}),t[5]=o):o=t[5];let s;t[6]===n.tools?s=t[7]:(s=n.tools.map(ja),t[6]=n.tools,t[7]=s);let c;t[8]===s?c=t[9]:(c=(0,R.jsx)(Oa,{children:s}),t[8]=s,t[9]=c);let l;t[10]===n.other?l=t[11]:(l=n.other&&n.other.length>0&&(0,R.jsxs)(R.Fragment,{children:[(0,R.jsx)(Da,{children:`Other Skills:`}),(0,R.jsx)(Oa,{children:n.other.map(Ma)})]}),t[10]=n.other,t[11]=l);let u;return t[12]!==a||t[13]!==c||t[14]!==l?(u=(0,R.jsxs)(Ea,{children:[r,a,o,c,l]}),t[12]=a,t[13]=c,t[14]=l,t[15]=u):u=t[15],u};function Aa(e,t){return(0,R.jsx)(`li`,{children:e},t)}function ja(e,t){return(0,R.jsx)(`li`,{children:e},t)}function Ma(e,t){return(0,R.jsx)(`li`,{children:e},t)}var Na=F(L)`
+`,ka=e=>{let t=(0,hi.c)(34),{skill:n}=e,r;t[0]===Symbol.for(`react.memo_cache_sentinel`)?(r=(0,R.jsx)(Da,{children:`Languages:`}),t[0]=r):r=t[0];let i;t[1]===n.languages?i=t[2]:(i=n.languages?.map(Aa),t[1]=n.languages,t[2]=i);let a;t[3]===i?a=t[4]:(a=(0,R.jsx)(Oa,{children:i}),t[3]=i,t[4]=a);let o;t[5]===Symbol.for(`react.memo_cache_sentinel`)?(o=(0,R.jsx)(Da,{children:`Programming:`}),t[5]=o):o=t[5];let s;t[6]===n.programming?s=t[7]:(s=n.programming?.map(ja),t[6]=n.programming,t[7]=s);let c;t[8]===s?c=t[9]:(c=(0,R.jsx)(Oa,{children:s}),t[8]=s,t[9]=c);let l;t[10]===Symbol.for(`react.memo_cache_sentinel`)?(l=(0,R.jsx)(Da,{children:`Design Patterns:`}),t[10]=l):l=t[10];let u;t[11]===n.designPatterns?u=t[12]:(u=n.designPatterns?.map(Ma),t[11]=n.designPatterns,t[12]=u);let d;t[13]===u?d=t[14]:(d=(0,R.jsx)(Oa,{children:u}),t[13]=u,t[14]=d);let f;t[15]===Symbol.for(`react.memo_cache_sentinel`)?(f=(0,R.jsx)(Da,{children:`Unity:`}),t[15]=f):f=t[15];let p;t[16]===n.unity?p=t[17]:(p=n.unity?.map(Na),t[16]=n.unity,t[17]=p);let m;t[18]===p?m=t[19]:(m=(0,R.jsx)(Oa,{children:p}),t[18]=p,t[19]=m);let h;t[20]===Symbol.for(`react.memo_cache_sentinel`)?(h=(0,R.jsx)(Da,{children:`Tools:`}),t[20]=h):h=t[20];let g;t[21]===n.tools?g=t[22]:(g=n.tools?.map(Pa),t[21]=n.tools,t[22]=g);let _;t[23]===g?_=t[24]:(_=(0,R.jsx)(Oa,{children:g}),t[23]=g,t[24]=_);let v;t[25]===n.other?v=t[26]:(v=n.other&&n.other.length>0&&(0,R.jsxs)(R.Fragment,{children:[(0,R.jsx)(Da,{children:`Other Skills:`}),(0,R.jsx)(Oa,{children:n.other.map(Fa)})]}),t[25]=n.other,t[26]=v);let y;return t[27]!==m||t[28]!==_||t[29]!==v||t[30]!==a||t[31]!==c||t[32]!==d?(y=(0,R.jsxs)(Ea,{children:[r,a,o,c,l,d,f,m,h,_,v]}),t[27]=m,t[28]=_,t[29]=v,t[30]=a,t[31]=c,t[32]=d,t[33]=y):y=t[33],y};function Aa(e,t){return(0,R.jsx)(`li`,{children:e},t)}function ja(e,t){return(0,R.jsx)(`li`,{children:e},t)}function Ma(e,t){return(0,R.jsx)(`li`,{children:e},t)}function Na(e,t){return(0,R.jsx)(`li`,{children:e},t)}function Pa(e,t){return(0,R.jsx)(`li`,{children:e},t)}function Fa(e,t){return(0,R.jsx)(`li`,{children:e},t)}var Ia=F(L)`
   gap: 80px;
   padding: 20px;
 
   @media (max-width: 768px) {
     gap: 40px;
   }
-`,Pa=F.div`
+`,La=F.div`
   width: 100%;
   height: 1px;
   background: silver;
   opacity: 0.2;
-`,Fa=()=>{let e=(0,hi.c)(1),t;return e[0]===Symbol.for(`react.memo_cache_sentinel`)?(t=(0,R.jsx)(Na,{children:ea.map(Ia)}),e[0]=t):t=e[0],t};function Ia(e,t){return(0,R.jsxs)(_.Fragment,{children:[(0,R.jsx)(ka,{skill:e}),t!==ea.length-1&&(0,R.jsx)(Pa,{})]},t)}var La=F.div`
+`,Ra=()=>{let e=(0,hi.c)(1),t;return e[0]===Symbol.for(`react.memo_cache_sentinel`)?(t=(0,R.jsx)(Ia,{children:ea.map(za)}),e[0]=t):t=e[0],t};function za(e,t){return(0,R.jsxs)(_.Fragment,{children:[(0,R.jsx)(ka,{skill:e}),t!==ea.length-1&&(0,R.jsx)(La,{})]},t)}var Ba=F.div`
   display: flex;
   flex-direction: column;
   gap: 15px;
-`,Ra=F.div`
+`,Va=F.div`
   display: flex;
   flex-direction: column;
   gap: 5px;
   border-left: 3px solid #00ced1;
   padding-left: 10px;
-`,za=F.h3`
+`,Ha=F.h3`
   margin: 0;
   font-family: "ZenDots", sans-serif;
   font-size: 2rem;
@@ -382,33 +382,33 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   @media (max-width: 768px) {
     font-size: 1.1rem;
   }
-`,Ba=F.span`
+`,Ua=F.span`
   font-size: 1.1rem;
   color: silver;
 
   @media (max-width: 768px) {
     font-size: 0.9rem;
   }
-`,Va=F.ul`
+`,Wa=F.ul`
   margin: 5px 0 0 15px;
   font-size: 1.1rem;
 
   @media (max-width: 768px) {
     font-size: 0.9rem;
   }
-`,Ha=e=>{let t=(0,hi.c)(4),{experiences:n}=e,r;t[0]===n?r=t[1]:(r=n.map(Wa),t[0]=n,t[1]=r);let i;return t[2]===r?i=t[3]:(i=(0,R.jsx)(La,{children:r}),t[2]=r,t[3]=i),i};function Ua(e,t){return(0,R.jsx)(`li`,{children:e},t)}function Wa(e,t){return(0,R.jsxs)(Ra,{children:[(0,R.jsx)(za,{children:e.company}),e.position,(0,R.jsx)(Ba,{children:e.time}),e.description&&e.description.length>0&&(0,R.jsx)(Va,{children:e.description.map(Ua)})]},t)}var Ga=F(L)`
+`,Ga=e=>{let t=(0,hi.c)(4),{experiences:n}=e,r;t[0]===n?r=t[1]:(r=n.map(qa),t[0]=n,t[1]=r);let i;return t[2]===r?i=t[3]:(i=(0,R.jsx)(Ba,{children:r}),t[2]=r,t[3]=i),i};function Ka(e,t){return(0,R.jsx)(`li`,{children:e},t)}function qa(e,t){return(0,R.jsxs)(Va,{children:[(0,R.jsx)(Ha,{children:e.company}),e.position,(0,R.jsx)(Ua,{children:e.time}),e.description&&e.description.length>0&&(0,R.jsx)(Wa,{children:e.description.map(Ka)})]},t)}var Ja=F(L)`
   gap: 80px;
   padding: 20px;
 
   @media (max-width: 768px) {
     gap: 40px;
   }
-`,Ka=F.div`
+`,Ya=F.div`
   width: 100%;
   height: 1px;
   background: silver;
   opacity: 0.2;
-`,qa=()=>{let e=(0,hi.c)(1),t;return e[0]===Symbol.for(`react.memo_cache_sentinel`)?(t=(0,R.jsx)(Ga,{children:ta.map(Ja)}),e[0]=t):t=e[0],t};function Ja(e,t){return(0,R.jsxs)(_.Fragment,{children:[(0,R.jsx)(Ha,{experiences:[e]}),t!==ta.length-1&&(0,R.jsx)(Ka,{})]},t)}var Ya=F(L)`
+`,Xa=()=>{let e=(0,hi.c)(1),t;return e[0]===Symbol.for(`react.memo_cache_sentinel`)?(t=(0,R.jsx)(Ja,{children:ta.map(Za)}),e[0]=t):t=e[0],t};function Za(e,t){return(0,R.jsxs)(_.Fragment,{children:[(0,R.jsx)(Ga,{experiences:[e]}),t!==ta.length-1&&(0,R.jsx)(Ya,{})]},t)}var Qa=F(L)`
   min-height: 90vh;
   padding: 60px;
   gap: 30px;
@@ -417,7 +417,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
     gap: 0;
     padding: 30px 10px;
   }
-`,Xa=F.nav`
+`,$a=F.nav`
   display: flex;
   justify-content: center;
   margin-bottom: 16px;
@@ -426,7 +426,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   @media (max-width: 768px) {
     margin-bottom: 0;
   }
-`,Za=F(bn)`
+`,eo=F(bn)`
   font-size: 2.2rem;
   text-decoration: none;
   color: green;
@@ -444,4 +444,4 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
       font-size: 1rem;
       margin-bottom: 0;
   }
-  `;(0,g.createRoot)(document.getElementById(`root`)).render((0,R.jsx)(_.StrictMode,{children:(0,R.jsx)(()=>(window.addEventListener(`scroll`,function(){document.body.style.backgroundPosition=`${window.scrollY*.05}px ${window.scrollY*.8}px`}),(0,R.jsx)(_n,{children:(0,R.jsxs)(Ya,{children:[(0,R.jsx)(ba,{}),(0,R.jsxs)(Xa,{children:[(0,R.jsx)(Za,{to:`/`,children:`Games`}),(0,R.jsx)(Za,{to:`/skills`,children:`Skills`}),(0,R.jsx)(Za,{to:`/exps`,children:`Experience`}),(0,R.jsx)(Za,{to:`/about-me`,children:`About me`}),(0,R.jsx)(Za,{to:`/contact`,children:`Contact`})]}),(0,R.jsxs)(At,{children:[(0,R.jsx)(Ot,{path:`/`,element:(0,R.jsx)(aa,{})}),(0,R.jsx)(Ot,{path:`/skills`,element:(0,R.jsx)(Fa,{})}),(0,R.jsx)(Ot,{path:`/exps`,element:(0,R.jsx)(qa,{})}),(0,R.jsx)(Ot,{path:`/contact`,element:(0,R.jsx)(ha,{})}),(0,R.jsx)(Ot,{path:`/about-me`,element:(0,R.jsx)(Ta,{})})]})]})})),{})}));
+  `;(0,g.createRoot)(document.getElementById(`root`)).render((0,R.jsx)(_.StrictMode,{children:(0,R.jsx)(()=>(window.addEventListener(`scroll`,function(){document.body.style.backgroundPosition=`${window.scrollY*.05}px ${window.scrollY*.8}px`}),(0,R.jsx)(_n,{children:(0,R.jsxs)(Qa,{children:[(0,R.jsx)(ba,{}),(0,R.jsxs)($a,{children:[(0,R.jsx)(eo,{to:`/`,children:`Games`}),(0,R.jsx)(eo,{to:`/skills`,children:`Skills`}),(0,R.jsx)(eo,{to:`/exps`,children:`Experience`}),(0,R.jsx)(eo,{to:`/about-me`,children:`About me`}),(0,R.jsx)(eo,{to:`/contact`,children:`Contact`})]}),(0,R.jsxs)(At,{children:[(0,R.jsx)(Ot,{path:`/`,element:(0,R.jsx)(aa,{})}),(0,R.jsx)(Ot,{path:`/skills`,element:(0,R.jsx)(Ra,{})}),(0,R.jsx)(Ot,{path:`/exps`,element:(0,R.jsx)(Xa,{})}),(0,R.jsx)(Ot,{path:`/contact`,element:(0,R.jsx)(ha,{})}),(0,R.jsx)(Ot,{path:`/about-me`,element:(0,R.jsx)(Ta,{})})]})]})})),{})}));
